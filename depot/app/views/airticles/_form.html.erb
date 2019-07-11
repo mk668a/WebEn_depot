@@ -1,0 +1,47 @@
+<%= form_with(model: airticle, local: true) do |form| %>
+  <% if airticle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(airticle.errors.count, "error") %> prohibited this airticle from being saved:</h2>
+
+      <ul>
+      <% airticle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :affiliation %>
+    <%= form.text_field :affiliation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_address %>
+    <%= form.text_field :contactaddress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phonenumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abstract %>
+    <%= form.text_area :abstract %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

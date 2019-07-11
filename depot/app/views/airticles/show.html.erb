@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @airticle.name %>
+</p>
+
+<p>
+  <strong>Affiliation:</strong>
+  <%= @airticle.affiliation %>
+</p>
+
+<p>
+  <strong>Contactaddress:</strong>
+  <%= @airticle.contactaddress %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @airticle.phonenumber %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @airticle.title %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @airticle.abstract %>
+</p>
+
+<%= link_to 'Edit', edit_airticle_path(@airticle) %> |
+<%= link_to 'Back', airticles_path %>
