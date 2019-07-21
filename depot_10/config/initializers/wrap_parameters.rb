@@ -1,10 +1,10 @@
 #---
-# Excerpted from "Agile Web Development with Rails",
+# Excerpted from "Agile Web Development with Rails 5",
 # published by The Pragmatic Bookshelf.
 # Copyrights apply to this code. It may not be used to create training material,
 # courses, books, articles, and the like. Contact us if you are in doubt.
 # We make no guarantees that this code is fit for any purpose.
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
+# Visit http://www.pragmaticprogrammer.com/titles/rails5 for more book information.
 #---
 # Be sure to restart your server when you modify this file.
 
@@ -13,10 +13,10 @@
 
 # Enable parameter wrapping for JSON. You can disable this by setting :format to an empty array.
 ActiveSupport.on_load(:action_controller) do
-  wrap_parameters format: [:json] if respond_to?(:wrap_parameters)
+  wrap_parameters format: [:json]
 end
 
 # To enable root element in JSON for ActiveRecord objects.
 # ActiveSupport.on_load(:active_record) do
-#  self.include_root_in_json = true
+#   self.include_root_in_json = true
 # end

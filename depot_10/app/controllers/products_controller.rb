@@ -1,10 +1,10 @@
 #---
-# Excerpted from "Agile Web Development with Rails",
+# Excerpted from "Agile Web Development with Rails 5",
 # published by The Pragmatic Bookshelf.
 # Copyrights apply to this code. It may not be used to create training material,
 # courses, books, articles, and the like. Contact us if you are in doubt.
 # We make no guarantees that this code is fit for any purpose.
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
+# Visit http://www.pragmaticprogrammer.com/titles/rails5 for more book information.
 #---
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
@@ -38,10 +38,10 @@ class ProductsController < ApplicationController
       if @product.save
         format.html { redirect_to @product,
           notice: 'Product was successfully created.' }
-        format.json { render action: 'show', status: :created,
+        format.json { render :show, status: :created,
           location: @product }
       else
-        format.html { render action: 'new' }
+        format.html { render :new }
         format.json { render json: @product.errors,
           status: :unprocessable_entity }
       end
@@ -55,9 +55,9 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to @product,
           notice: 'Product was successfully updated.' }
-        format.json { head :no_content }
+        format.json { render :show, status: :ok, location: @product }
       else
-        format.html { render action: 'edit' }
+        format.html { render :edit }
         format.json { render json: @product.errors,
           status: :unprocessable_entity }
       end
@@ -69,7 +69,8 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to products_url }
+      format.html { redirect_to products_url,
+          notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

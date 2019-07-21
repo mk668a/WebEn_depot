@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Airticles</h1>
+
+<% cache @airticles do %>
+  <% @airticles.each do |airticle| %>
+    <% cache airticle do %>
+      <div class="entry">
+        <h3><%= airticle.title %></h3>
+        <div class="info">
+          <div id="affiliation">
+            <%= airticle.affiliation %>
+          </div>
+          <div id="contactaddress">
+            <%= airticle.contactaddress %>
+          </div>
+          <div id="phonenumber">
+            <%= airticle.phonenumber %>
+          </div>
+          <div id="title">
+            <%= airticle.title %>
+          </div>
+          <div id="abstract">
+            <%= airticle.abstract %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
