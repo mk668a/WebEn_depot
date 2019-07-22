@@ -1,0 +1,1 @@
+rails g scaffold airticle name:string affiliation:string contactaddress:string phonenumber:string title:string abstract:string

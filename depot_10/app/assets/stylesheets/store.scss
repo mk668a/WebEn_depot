@@ -11,23 +11,21 @@
     overflow: auto;
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
-    min-height: 100px;
 
     h3 {
       font-size: 120%;
       font-family: sans-serif;
-      margin-left: 100px;
       margin-top: 0;
       margin-bottom: 2px;
       color: #227;
     }
 
-    .info {
-
+    #info {
       display: flex;
+      margin-bottom: 1em;
 
       div {
-
+        margin-right: 10px;
       }
     }
   }

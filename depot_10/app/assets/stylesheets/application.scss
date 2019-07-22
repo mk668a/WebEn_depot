@@ -1,3 +1,18 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 body,
 body > ol,
 body > p,
@@ -9,18 +24,43 @@ body > ul {
 #banner {
   position: relative;
   min-height: 40px;
-  background: #9c9;
+  background: #99becc;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #225188;
   text-align: center;
 
-  img {
+  .logo {
+    height: 40px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 192px;
+    top: 5px;
+    left: 10px;
+    background: #497d90;
+    padding: 5px;
+    color: #fff;
+
+    #logo {
+      font-size: 50%;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p:nth-of-type(2) {
+      position: relative;
+      text-align: left;
+      font-size: 25%;
+    }
+
+    p:nth-of-type(3) {
+      position: relative;
+      top: -10px;
+      text-align: right;
+      margin: 0;
+      font-size: 25%;
+    }
   }
 }
 
@@ -38,7 +78,7 @@ body > ul {
 }
 
 #columns {
-  background: #141;
+  background: #113c44;
   display: flex;
 
   #main {
@@ -49,7 +89,7 @@ body > ul {
 
   #side {
     padding: 1em 2em;
-    background: #141;
+    background: #113c44;
 
     ul {
       padding: 0;
@@ -58,7 +98,7 @@ body > ul {
         list-style: none;
 
         a {
-          color: #bfb;
+          color: #bbfbff;
           font-size: small;
         }
       }
